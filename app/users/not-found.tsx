@@ -2,7 +2,7 @@ import React from 'react'
 
 const UserNotFoundPage = () => {
   return (
-    <div>This user does not exist</div>
+    <div>This user doesn&apos;t exist</div>
   )
 }
 
