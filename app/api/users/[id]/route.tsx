@@ -1,6 +1,8 @@
 import { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
 
+import schema from '../schema';
+
 
 export function GET(
     request:NextRequest, 
@@ -16,8 +18,9 @@ export function GET(
         {params}: { params: {id: number}})
         {
             const body = await req.json()
-            if(!body.name)
-              return NextResponse.json({error:"name is required"},{status:400})
+            const validation = schema.safeParse(body)
+            if(!validation.success)
+              return NextResponse.json(validation.error.errors,{status:400})
 
             if(params.id > 10)
               return NextResponse.json({error: "user not found"}, {status:404})
