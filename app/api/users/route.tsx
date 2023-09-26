@@ -1,7 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
 import schema from "./schema";
+import prisma from "@/prisma/client";
 
 export function GET(req: NextRequest){
+    prisma.user.findMany({
+        where:{
+            email:""
+        }
+    })
+
     return NextResponse.json([
         {id:1, name: "Andreea"},
         {id:2, name: "Jonathan"},
