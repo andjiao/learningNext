@@ -1,0 +1,14 @@
+Guide to install cloudinary in next:
+https://next.cloudinary.dev/installation
+
+
+Documentation to implement an upload-component:
+https://next.cloudinary.dev/clduploadwidget/basic-usage
+
+Guide to set-up an uploadPreset for the CldUploadWidget-component:
+1. Go to cloudinary
+2. On the left, click on settings
+3. Scroll down and go to the upload-page
+4. 
+
+
